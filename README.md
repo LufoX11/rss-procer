@@ -1,6 +1,6 @@
 # RSS Procer
 
-RSS Procer fue una app diseñada para leer noticias de diversas fuentes. Basada en jQuery Mobile y PhoneGap, utilizando Slim Framework como backend, estuvo disponible para las tiendas de Android, iOS y BlackBerry OS.
+RSS Procer fue una app diseñada como lector de noticias de diversas fuentes. Estuvo basada en jQuery Mobile y PhoneGap, utilizando Slim Framework como backend. Estuvo disponible para las tiendas de Android, iOS y BlackBerry OS.
 
 ### IMPORTANTE
 
