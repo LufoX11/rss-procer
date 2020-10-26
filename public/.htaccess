@@ -1,0 +1,26 @@
+RewriteEngine On
+
+# Some hosts may require you to use the `RewriteBase` directive.
+# If you need to use the `RewriteBase` directive, it should be the
+# absolute physical path to the directory that contains this htaccess file.
+#
+# RewriteBase /
+
+# Cache control
+<filesMatch "\.(gif|jpg|jpeg|png|js|css)$">
+    ExpiresActive Off
+    Header append Cache-Control "public"
+</filesMatch>
+
+# Other front-controllers
+RewriteRule ^(.*)/ajax/(.*)$ ajax.php [QSA,L]
+RewriteRule ^tracking/(.*)$ tracking.php [QSA,L]
+
+# Aliases
+RewriteRule ^config/(.*)$ /$1/config [L,R]
+RewriteRule ^recommend/(.*)$ /$1/recommend [L,R]
+RewriteRule ^about/(.*)$ /$1/about [L,R]
+
+# Main front-controller
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php [QSA,L]

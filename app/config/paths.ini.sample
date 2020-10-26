@@ -1,0 +1,28 @@
+; Rutas de archivos.
+;
+; --- Rutas web
+;
+; [web]
+;
+; site[default]: Ruta default del dominio.
+; static[js]: Ruta hacia los archivos de Javascript.
+; static[css]: Ruta hacia los archivos de CSS.
+; static[img]: Ruta hacia los archivos de imágen.
+;
+; [fs] (Rutas absolutas del sistema de archivos)
+;
+; root: Ruta hacia rssprocer.com
+
+; ---
+
+[web]
+
+site[default] = "http://www.rssprocer.com"
+
+static[js] = "http://static.rssprocer.com/js"
+static[css] = "http://static.rssprocer.com/css"
+static[img] = "http://static.rssprocer.com/img"
+
+[fs]
+
+root = "/var/www/rssprocer.com/current"

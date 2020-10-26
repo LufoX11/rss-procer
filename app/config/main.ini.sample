@@ -1,0 +1,67 @@
+; Archivo de configuración de sistema.
+;
+; [services]: Todos los servicios disponibles que reconocerá el sistema. Los servicios deberán listarse debajo siguiendo el esquema <index> = "<service_name>".
+;
+; [framework]: Configuraciones específicas del framework.
+;
+; status: Status actual de la aplicación (online|offline)
+; mode: Modo de trabajo de la aplicación: "development", "production".
+; googleSimpleApiKey: Key de Google para aplicaciones que requieran permisos simples.
+; pagesCache: (boolean) Activa el caché global (etag + versionado por usuario).
+; preloadPages: (boolean) Activa la precarga de páginas importantes y noticias de la home en el cliente.
+; maxNewsToShow: (integer) Máximo de noticias para mostrar en la home.
+; wundergroundWeatherApiKey: (string) Key de Wunderground para su API del clima.
+;
+; [sys]: Configuración global del sistema
+;
+; emails: Contiene la configuración de campos predeterminados para el envío de correos.
+; emails[name]: (string) Nombre predeterminado del Sender.
+; emails[email]: (string) Casilla de correo predeterminada del Sender.
+; weatherSource: (string) Nombre de la librería a utilizar como orígen de datos. Por ahora solo: WundergroundWeatherApi y GoogleWeatherApi.
+;
+; [alerts]: Configuración de emails para alertas del sistema.
+;
+; cron: Alertas para los procesos de cron.
+; cron[fromName]: Nombre del Sender.
+; cron[fromEmail]: Email del Sender.
+; cron[toEmail]: Casilla de correo de quien recibirá la alerta. Pueden añadirse más de una mediante el separador de listas "|".
+; site: Alertas para los procesos del sitio.
+; site[fromName]: Nombre del Sender.
+; site[fromEmail]: Email del Sender.
+; site[toEmail]: Casilla de correo de quien recibirá la alerta. Pueden añadirse más de una mediante el separador de listas "|".
+;
+; [firewall]: Protección de ataques
+;
+; floodCount: Cantidad de peticiones máximas * floodTime para considerarse ataque.
+; floodTime: Tiempo (en segs) que dura el caché de peticiones.
+; banTime: Tiempo (en segs) que dura un cliente considerado atacante.
+; blacklist: IPs / IDs de dispositivos de clientes prohibidos, separadas por comas.
+; whitelist: IPs / IDs de dispositivos de clientes excluídos de la comprobación, separadas por comas.
+;
+; [emails]: Configuración del sistema de mailing
+;
+; whitelistDomains: Dominios de mailers que son aceptados como válidos (el resto será escaneado en busca del registro MX correspondiente). Separador de lista: "|".
+; exclude: Emails que contengan estas palabras serán excluídos. Separador de lista: ",".
+; blacklist: Emails que serán excluídos. Separador de lista: ",".
+
+; ---
+
+[services]
+
+0 = "rssprocer"
+
+[framework]
+
+status = "online"
+mode = "development"
+googleSimpleApiKey = "AIzaSyD2GCLxJs1-cIeBlDGt6stVze4UCz3c0vB"
+pagesCache = true
+preloadPages = true
+maxNewsToShow = 20
+wundergroundWeatherApiKey = "d06c9065a88823fa"
+
+[sys]
+
+emails[name] = "RSS Procer"
+emails[email] = "info@rssprocer.com"
+weatherSource = "WundergroundWeatherApi"

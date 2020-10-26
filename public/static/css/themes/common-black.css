@@ -1,0 +1,103 @@
+.ui-icon-edit {
+    background-image: url("../../img/themes/black/edit.png");
+}
+.ui-icon-menu-home {
+    background-image: url("../../img/themes/black/menu-home.png");
+}
+.ui-icon-menu-topics {
+    background-image: url("../../img/themes/black/menu-topics.png");
+}
+.ui-icon-menu-weather {
+    background-image: url("../../img/themes/black/menu-weather.png");
+}
+.ui-icon-menu-more {
+    background-image: url("../../img/themes/black/menu-more.png");
+}
+.ui-icon-menu-messages {
+    background-image: url("../../img/themes/black/menu-messages.png");
+}
+.ui-icon-menu-users {
+    background-image: url("../../img/themes/black/menu-users.png");
+}
+.ui-icon-menu-services {
+    background-image: url("../../img/themes/black/menu-services.png");
+}
+.ui-li-thumb {
+    margin-top: 1px;
+}
+.ui-icon-facebook {
+    background-image: url("../../img/themes/white/applet-sharer-tb-facebook-icon.png");
+}
+.ui-icon-twitter {
+    background-image: url("../../img/themes/white/applet-sharer-tb-twitter-icon.png");
+}
+
+/**
+ * Themes: Default
+ */
+.ui-body-a .ui-link:active, .ui-body-a .ui-link:hover {
+    color: #3f3f3f;
+}
+.ui-body-a .ui-link:visited {
+    color: #bd0000;
+}
+.rp-link {
+    color: #bd0000;
+}
+.ui-header .ui-li.ui-btn-up-a {
+    border: 1px solid #3f3f3f;
+    background: #3f3f3f;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #000;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#585858), to(#252525));
+    background-image: -webkit-linear-gradient(#585858, #252525);
+    background-image: -moz-linear-gradient(#585858, #252525);
+    background-image: -ms-linear-gradient(#585858, #252525);
+    background-image: -o-linear-gradient(#585858, #252525);
+    background-image: linear-gradient(#585858, #252525);
+}
+.ui-btn-up-a.ui-btn-icon-notext, .ui-btn-hover-a.ui-btn-icon-notext {
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #000;
+}
+.ui-btn-down-a.ui-btn-icon-notext {
+    border: 1px solid #bd0000;
+    background: #bd0000;
+}
+#panel-default {
+    border-right: 1px solid #000;
+    color: #fff;
+    text-shadow: 0 1px 0 #000;
+    background: #3f3f3f;
+}
+    #panel-default h3.title {
+        border-bottom: 2px groove #666;
+    }
+
+/**
+ * Themes: Suave
+ */
+.suave .rp-link {
+    color: #387bbe;
+}
+.suave .ui-btn-up-a.ui-btn-icon-notext, .suave .ui-btn-hover-a.ui-btn-icon-notext {
+    border: 1px solid #ccc;
+    background: #fff;
+}
+.suave .ui-btn-down-a.ui-btn-icon-notext {
+    border: 1px solid #387bbe;
+    background: #387bbe;
+}
+.suave #panel-default {
+    border-right: 1px solid #b3b3b3;
+    color: #3e3e3e;
+    text-shadow: 0 1px 0 #fff;
+    background: #ddd;
+}
+    .suave #panel-default h3.title {
+        border-bottom: 2px groove #FFF;
+    }

@@ -1,0 +1,17 @@
+table.jqplot-table-legend, table.jqplot-cursor-legend {
+    background-color: rgba(255, 255, 255, 0.21);
+}
+.jqplot-highlighter-tooltip {
+    color: white;
+    border-color: white;
+    background-color: rgba(160, 160, 160, 0.21);
+    padding: 2px 6px;
+}
+.jqplot-target {
+    color: white;
+    font-family: "Helvetica,Arial,sans-serif";
+}
+.jqplot-pie-series.jqplot-data-label {
+    font-size: 0.75em;
+    color: black;
+}

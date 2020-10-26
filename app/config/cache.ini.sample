@@ -1,0 +1,17 @@
+; Configuración del sistema de cache.
+;
+; --- Memcached
+;
+; [memcached]
+;
+; master[<0>]: Nombre del host del huésped.
+; master[<1>]: Puerto de conexión.
+; master[<2>]: Cantidad de carga otorgada a esta conexión (en porcentaje).
+
+; ---
+
+[memcached]
+
+master[] = "127.0.0.1"
+master[] = "11211"
+master[] = "100"

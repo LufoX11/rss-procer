@@ -1,0 +1,13 @@
+set expandtab
+set nowrap
+set tabstop=4
+set autoindent
+set sw=4
+set number
+set hls is
+set ruler
+set cursorline
+syntax on
+filetype on
+au BufNewFile, BufRead *.tpl set filetype=php
+let html_no_rendering=1

@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS admin_groups_permissions,admin_users_groups,admin_users,admin_groups,admin_permissions;

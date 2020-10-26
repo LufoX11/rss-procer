@@ -1,0 +1,77 @@
+; Configuración del Recolector de Datos.
+;
+; [<service_name>]: Nombre del servicio.
+;
+; Relativo a la estructura del feed
+; 
+; feed[namespace]: Si el formato es ATOM, debe especificarse el namespace utilizado. El nombre del namespace para las expresiones XPATH será "f". Ej.: "/f:feed/f:entry".
+; feed[namespace1]: Extra namespace. Ej.: "f:content/f1:div".
+;
+; Relativo al canal de la noticia:
+; channel[root]: * Ruta base hacia el nodo que contiene la información del canal.
+; channel[title]: * Título del canal.
+; channel[description]: Descripción del canal.
+; channel[image]: Imágen para el canal.
+;
+; Relativo a la noticia:
+; news[root]: * Ruta base hacia el nodo que contiene la información de la noticia.
+; news[title]: * Título de la noticia.
+; news[summary]: Resúmen de la noticia.
+; news[description]: Cuerpo de la noticia.
+; news[link]: URI de la noticia.
+; news[image]: Imágen de la noticia.
+; news[datetime]: Fecha de la noticia.
+;
+; Acceso remoto a la fuente de noticias:
+; sources[<source_name>]: URI de acceso al RSS o XML de la noticia.
+;
+; Personalizaciones específicas del canal:
+; channelsTitles[<source_name>]: Título para el canal (pisará el obtenido desde el canal).
+; channelsIconsDir: Ruta hacia el directorio contenedor de las imágenes (relativo al contenedor de imágenes).
+; channelsIcons[<source_name>]: Nombre del archivo de la imágen que representará al canal. Los arhivos deben tener un tamaño de 16x16 y contener el sufijo "-icon": <name>-icon.<ext>
+; translationList[<key>]: Traducciones de palabras o frases específicas dentro del cuerpo de las noticias.
+; exclusionList[<name>]: Expresiones regulares para filtrar contenidos no deseados. Esta expresión, será filtrada mediante: preg_replace("expresion", "", $raw).
+; newsLinksFormatter: Ayuda a corregir links parciales, rotos o no estándard. Utilice %LINK% para reemplazar por el link obtenido desde el ítem.
+; newsImagesFormatter: Ayuda a corregir imágenes parciales, rotas o no estándard. Utilice %IMAGE% para reemplazar por la imágen obtenida desde la noticia.
+; links[protocol]: Protocolo a reemplazar en los links originales de las noticias.
+; links[domain]: Dominio a reemplazar en los links originales de las noticias.
+; floodProtection: "min,max" Tiempo a retrazar en segundos las peticiones de noticias. Se utilizará un random entre "min" y "max" para evitar demoras idénticas. Por default, es entre 1 y 5 segundos: "1,5".
+;
+; Consideraciones y opciones especiales del parser:
+; * Todas las rutas están expresadas en la sintaxis de XPATH.
+; * Para usar los íconos predefinidos del canal, no deben agregarse el conjunto de opciones: channelsIcons*
+; * Utilice ":followLink=true" en el campo "news[description]" para obtener los datos desde el link de la noticia.
+; * Utilice ":copy=true" en el campo "news[summary]" para copiar el contenido de la descripción como resúmen de la noticia (recomendado si no hay datos).
+; * Utilice ":useLinkImage=<regex>" en el campo "news[image]" para obtener la imágen desde el link o descripción de la noticia. "regex" debe contener la expresión regular para obtener la imágen.
+; * Utilice ":useSummaryImage=<regex>" en el campo "news[image]" para obtener la imágen desde el resúmen de la noticia. "regex" debe contener la expresión regular para obtener la imágen.
+; * Para expresiones regulares, el caracter igual "=" debe ser reemplazado por "%EQUAL%"
+
+; ---
+
+feed[namespace] = "http://www.w3.org/2005/Atom"
+
+channel[root] = "channel"
+channel[title] = "title"
+channel[description] = "description"
+channel[image] = "image"
+
+news[root] = "channel/item"
+news[title] = "title"
+news[summary] = ":copy=true"
+news[description] = ":followLink=true"
+news[link] = "link"
+news[image] = ':useLinkImage=@<div id%EQUAL%"foto">.*img.*src%EQUAL%"([^"]*)".*</div>@i'
+news[datetime] = "datetime"
+
+sources[city] = "http://www.example.com/city.xml"
+sources[world] = "http://www.example.com/world.xml"
+
+channelsIconsDir = ""
+channelsIcons[city] = "city.png"
+channelsIcons[world] = "world.png"
+translationList["Agregar comentarios:"] = ""
+translationList["Estúpido"] = "####"
+exclusionList[legal] = '/<div id="inline_normas" class="modalLegales">(.*)<\/div>/siU'
+newsLinksFormatter = 'http://cronica.com.ar%LINK%'
+newsImagesFormatter = 'http://clarin.com%IMAGE%'
+floodProtection = "1,20"

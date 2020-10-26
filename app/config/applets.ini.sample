@@ -1,0 +1,52 @@
+; Configuración de applets del usuario.
+;
+; --- CustomForm: Formularios personalizables.
+; Este applet permite generar formularios de consulta especiales para el usuario.
+;
+; customForm[enabled]: [true|false] Activa / Desactiva el applet.
+; customForm[title]: Título para mostrar en el applet.
+; customForm[description]: Descripción del formulario personalizado.
+; customForm[description_long]: Descripción larga para mostrar en la pantalla de formulario.
+; customForm[image]: Imágen principal del applet (80x80).
+; customForm[icon]: Imágen a usar como ícono del applet (16x16).
+; customForm[field_<position>]: [<tipo>|<elemento>|<nombre>|<descripcion>|<requerido>]
+;     field_<position>: Posicion del campo dentro del formulario. El orden de los elementos es ascendente.
+;     <tipo>: Tipo de elemento (text|textarea|email).
+;     <elemento>: Nombre del elemento en el HTML.
+;     <nombre>: Nombre corto del campo. Sirve para distinguir el nombre del campo en el email.
+;     <descripcion>: Descripción del campo. Sirve para indicarle al usuario qué información debe proporcionar.
+;     <requerido>: Si el campo es requerido o no (1|0).
+; customForm[emails]: Email(s) a quien(es) enviar la consulta.
+; customForm[email_subject]: Asunto para el email enviado. Puede contener los siguientes tags:
+;     %TICKET_ID%: ID del ticket de control recién generado.
+; customForm[email_success_subject]: Asunto para el email enviado al usuario. Puede contener los siguientes tags:
+;     %TICKET_ID%: ID del ticket de control recién generado.
+; customForm[email_success_body]: HTML de la respuesta automática que recibe el usuario al enviar la consulta. Puede contener los siguientes tags:
+;     %TICKET_ID%: ID del ticket de control recién generado.
+;
+; --- Estructura de applets por servicio:
+;
+; [<servicio>]
+;
+; <applet[<opción>]>
+
+; ---
+
+[laarena]
+
+customForm[enabled] = true
+customForm[title] = "Consultas y Reclamos"
+customForm[description] = "Contáctese con Atención al cliente AAAVYT"
+customForm[description_long] = "Contáctese con Atención al cliente AAAVYT y envíenos su consulta,
+reclamo o sugerencia."
+customForm[image] = "applet-customform.png"
+customForm[icon] = "applet-customform-icon.png"
+customForm[field_0] = "text|name|Nombre|Nombre|1"
+customForm[field_1] = "email|email|Email|Email|1"
+customForm[field_2] = "textarea|description|Consulta|Escriba su consulta|1"
+customForm[emails] = "lucianofantuzzi@gmail.com"
+customForm[email_subject] = "[#%TICKET_ID%] Nueva consulta desde RSS Procer - AAAVYT"
+customForm[email_success_subject] = "[#%TICKET_ID%] Gracias por su consulta"
+customForm[email_success_body] = "Hemos recibido su consulta/reclamo con el número
+de identificación: <strong>%TICKET_ID%</strong>.<br />Pronto nos pondremos en contacto con usted.
+<br /><br />Le saluda Atte.,<br /><strong>Atención al cliente AAAVYT</strong>."

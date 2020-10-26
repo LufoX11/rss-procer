@@ -1,0 +1,58 @@
+; Configuración de la base de datos.
+;
+; --- MongoDB
+;
+; [mongodb]
+;
+; default[host]: Dirección donde se aloja el anfitrión.
+; default[user]: Nombre de usuario de la base de datos.
+; default[password]: Contraseña de la base de datos.
+; default[database]: Nombre de la base de datos.
+; default[collection]: Nombre de la colección.
+; default[port]: Puerto de conexión con el anfitrión.
+;
+; Nota: "default" es el nombre para referirse a esta configuración.
+;
+; --- MySQL
+;
+; [<service_name>]: Nombre del servicio.
+;
+; read[host]: Dirección donde se aloja el anfitrión para lectura.
+; read[user]: Nombre de usuario de la base de datos.
+; read[password]: Contraseña de la base de datos.
+; read[database]: Nombre de la base de datos del servicio.
+; read[port]: Puerto de conexión con el anfitrión.
+;
+; write[host]: Dirección donde se aloja el anfitrión para escritura.
+; write[user]: Nombre de usuario de la base de datos.
+; write[password]: Contraseña de la base de datos.
+; write[database]: Nombre de la base de datos del servicio.
+; write[port]: Puerto de conexión con el anfitrión.
+;
+; Consideraciones:
+; * Actualmente no se está usando un modelo de réplica, con lo cual read/write DEBEN contener los mismos datos.
+
+; ---
+
+[mongodb]
+
+tracking[host] = "127.0.0.1"
+tracking[user] = "root"
+tracking[password] = ""
+tracking[database] = "rssprocer"
+tracking[collection] = "tracking"
+tracking[port] = "27017"
+
+[rssprocer]
+
+read[host] = "127.0.0.1"
+read[user] = "root"
+read[password] = ""
+read[database] = "rssprocer"
+read[port] = "3306"
+
+write[host] = "127.0.0.1"
+write[user] = "root"
+write[password] = ""
+write[database] = "rssprocer"
+write[port] = "3306"

@@ -1,0 +1,11 @@
+; Configuración de la apariencia de la aplicación
+;
+; [service]
+;
+; mainMenu: [name:string,show:bool|name,show|...] Configura la estructura del menú principal. "name" es el nombre que se verá en el menú y "show" si estará disponible o no. El órden es fijo y está dado por (según el standard actual): novedades, secciones, clima, más.
+
+;---
+
+[laarena]
+
+mainMenu = "Avances,1|secciones,0"

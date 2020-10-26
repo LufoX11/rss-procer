@@ -1,0 +1,9 @@
+div[data-role="content"] ul li.li-normal {
+    min-height: 82px;
+}
+div[data-role="content"] ul li.li-small {
+    min-height: 65px;
+}
+div[data-role="content"] ul.autoHeight li {
+    min-height: 0;
+}

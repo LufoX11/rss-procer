@@ -1,0 +1,63 @@
+.ui-icon-edit {
+    background-image: url("../../img/themes/white/edit.png");
+}
+.ui-icon-menu-home {
+    background-image: url("../../img/themes/white/menu-home.png");
+}
+.ui-icon-menu-topics {
+    background-image: url("../../img/themes/white/menu-topics.png");
+}
+.ui-icon-menu-weather {
+    background-image: url("../../img/themes/white/menu-weather.png");
+}
+.ui-icon-menu-more {
+    background-image: url("../../img/themes/white/menu-more.png");
+}
+.ui-icon-menu-messages {
+    background-image: url("../../img/themes/white/menu-messages.png");
+}
+.ui-icon-menu-users {
+    background-image: url("../../img/themes/white/menu-users.png");
+}
+.ui-icon-menu-services {
+    background-image: url("../../img/themes/white/menu-services.png");
+}
+.ui-li-thumb {
+    margin-top: 1px;
+}
+.ui-icon-facebook {
+    background-image: url("../../img/themes/white/applet-sharer-tb-facebook-icon.png");
+}
+.ui-icon-twitter {
+    background-image: url("../../img/themes/white/applet-sharer-tb-twitter-icon.png");
+}
+.ui-icon-menu-stats {
+    background-image: url("../../img/themes/white/menu-stats.png");
+}
+.tip {
+    background: url("../../img/themes/white/guest-icon.png") no-repeat left center;
+}
+
+/**
+ * Themes: Oscuro
+ */
+.oscuro .rp-link {
+    color: #387bbe;
+}
+.oscuro .ui-btn-up-a.ui-btn-icon-notext, .oscuro .ui-btn-hover-a.ui-btn-icon-notext {
+    border: 1px solid #333;
+    background: #fff;
+}
+.oscuro .ui-btn-down-a.ui-btn-icon-notext {
+    border: 1px solid #387bbe;
+    background: #387bbe;
+}
+.oscuro #panel-default {
+    border-right: 1px solid #000;
+    color: #fff;
+    text-shadow: 0 1px 0 #000;
+    background: #222;
+}
+    .oscuro #panel-default h3.title {
+        border-bottom: 2px groove #444;
+    }

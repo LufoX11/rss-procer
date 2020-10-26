@@ -1,0 +1,227 @@
+a {
+    text-decoration: none;
+}
+.main-page .ui-header .ui-title {
+    margin-bottom: .5em;
+}
+div.text {
+    text-align: justify;
+    margin-bottom: .5em;
+    margin-left: .5em;
+    margin-right: .5em;
+}
+    div.text p {
+        margin: 9px 0 0;
+    }
+    div.text p span.small-title {
+        font-size: 13px;
+    }
+    div.text h1, div.text h3 {
+        text-align: left;
+    }
+img.picture-frame {
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    border-radius: .3em;
+    -webkit-box-shadow: #888 0 0 .3em;
+    -moz-box-shadow: #888 0 0 .3em;
+    box-shadow: #888 0 0 .3em;
+}
+li.ui-li-divider {
+    padding: .3em 15px;
+}
+#page-news-newsContainer {
+    text-align: center;
+}
+.center {
+    text-align: center;
+}
+.ui-footer {
+    padding: 0;
+    margin: 0;
+}
+    .ui-footer .ui-title {
+        font-size: 15px;
+    }
+.inline-content .ui-select a.ui-btn {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.ui-content {
+    overflow: hidden;
+    padding: 3px;
+}
+.ui-content .ui-listview-filter-inset {
+    margin: -3px -6px 0;
+}
+.ui-content .ui-listview-inset {
+    margin: 0;
+}
+.font-1 {
+    font-size: 8px;
+}
+.font-2 {
+    font-size: 10px;
+}
+.font-3 {
+    font-size: 12px;
+}
+.font-4 {
+    font-size: 14px;
+}
+.font-5 {
+    font-size: 16px;
+}
+.ui-navbar li .ui-btn, .ui-navbar .ui-navbar-toggle .ui-btn {
+    font-size: 16px;
+}
+.ui-navbar li .ui-btn .ui-btn-inner, .ui-navbar .ui-navbar-toggle .ui-btn-inner {
+    padding-top: .70em;
+    padding-bottom: .65em;
+}
+.header-menu.ui-navbar li .ui-btn .ui-btn-inner .ui-icon {
+    left: auto;
+}
+.weather-select-location {
+    text-align: center;
+}
+.ui-li-aside a img {
+    vertical-align: middle;
+}
+.content-news h5 {
+    margin-top: .6em;
+    margin-bottom: .6em;
+    font-weight: normal;
+}
+.readnews {
+    opacity: .5;
+}
+.ui-input-text {
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+.full-size {
+    height: 200px !important;
+    max-height: 200px;
+}
+.content-config .ui-listview-inset .ui-li {
+    border-right-width: 0;
+    border-left-width: 0;
+}
+.content-config .ui-li-thumb {
+    margin-top: 0;
+}
+.config-update p {
+    margin-top: 3px;
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+    .config-update p.title {
+        margin: 9px 0 0 0;
+        font-weight: bold;
+    }
+.applet-header-weather .ui-listview .ui-btn .ui-link-inherit {
+    padding-left: 85px;
+}
+.banner-dialog-body.ui-dialog div[data-role="footer"] p {
+    font-size: 12px;
+}
+.banner-dialog-body.ui-dialog {
+    margin-top: 0;
+}
+.banner-dialog-body .ui-dialog-contain,
+.banner-dialog-body .ui-dialog-contain .ui-header,
+.banner-dialog-body .ui-dialog-contain .ui-content,
+.banner-dialog-body .ui-dialog-contain .ui-footer {
+    margin: 0 !important;
+    -moz-border-radius-topleft: 0;
+    -webkit-border-top-left-radius: 0;
+    border-top-left-radius: 0;
+    -moz-border-radius-topright: 0;
+    -webkit-border-top-right-radius: 0;
+    border-top-right-radius: 0;
+}
+    .banner-dialog-body .ui-dialog-contain {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .banner-dialog-body .ui-dialog-contain .ui-footer p {
+        margin: 2px 0 4px -11px;
+    }
+    .banner-dialog-body .ui-dialog-contain .ui-footer a.ui-btn {
+        margin-right: 3px;
+    }
+.ui-selectmenu .ui-li-divider {
+    opacity: .33;
+}
+.charts {
+    display: inline-block;
+    margin: 10px 15px;
+}
+    .charts.mini-chart {
+        height: 250px;
+        width: 375px;
+    }
+    .charts.pie-chart {
+        height: 250px;
+        width: 387px;
+    }
+    .charts.bar-chart {
+        height: 250px;
+        width: 350px;
+    }
+.tip {
+    margin-top: 6px;
+    padding-left: 21px;
+    height: 16px;
+    padding-top: 3px;
+}
+
+/**
+ * Applet: Sharer
+ */
+.applet-sharer {
+    margin-top: .6em;
+}
+    .applet-sharer a {
+        margin: 0;
+    }
+
+/**
+ * Left Panel
+ */
+#panel-default .ui-panel-inner {
+    padding: .2em .4em;
+}
+#panel-default .ui-listview {
+    margin: .5em 0;
+}
+    #panel-default .ui-listview .ui-li-icon {
+        top: .7em;
+    }
+#panel-default h3.title {
+    margin-top: .5em;
+    margin-bottom: .4em;
+    margin-left: .1em;
+    padding-bottom: .4em;
+}
+#panel-default [data-rel="close"] {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/**
+ * Messages
+ */
+#page-messages {
+    max-width: 400px;
+    min-width: 300px;
+}
+    #page-messages .ui-content {
+        text-align: center;
+        padding: 12px;
+    }
+        #page-messages .ui-content h3, #page-messages .ui-content p {
+            text-align: left;
+        }

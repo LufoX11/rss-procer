@@ -1,0 +1,21 @@
+.ui-li-thumb, .ui-listview .ui-li-icon {
+    max-height: 75px;
+    max-width: 75px;
+}
+.ui-header .ui-li-thumb, .ui-listview .ui-li-icon {
+    max-height: 80px;
+    max-width: 80px;
+}
+div.content-news img {
+    max-height: 290px;
+    max-width: 290px;
+}
+.ui-li-has-thumb .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li-has-thumb {
+    padding-left: 85px;
+}
+.ui-header .ui-li-has-thumb .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li-has-thumb {
+    padding-left: 100px;
+}
+div[data-role="content"] li.ui-btn.ui-li-has-thumb {
+    max-height: 77px;
+}

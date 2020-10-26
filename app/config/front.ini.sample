@@ -1,0 +1,17 @@
+; Configuración de front-end.
+;
+; [versioning]: Versionado de archivos.
+; application: Versión oficial de la aplicación. Si se detecta un cambio aquí, el front-end reiniciará la aplicación.
+; platform: Versionado general de la plataforma. Alcance: Todos los archivos.
+; images: Versionado de las imágenes.
+; javascript: Versionado de archivos Javascript.
+; css: Versionado de archivos CSS.
+
+; ---
+
+[versioning]
+application = "1.00.0000"
+platform = "1"
+images = "1"
+javascript = "1"
+css = "1"

@@ -1,0 +1,44 @@
+; Configuración del servicio.
+;
+; [rssprocer]: Nombre del servicio.
+;
+; title: Título del servicio.
+; pageTitle: Título de página del servicio.
+; pageDescription: Descripción de página del servicio.
+; loaderText: Texto para mostrar durante el arranque.
+; loaderImage: Imágen alternativa para mostrar durante el arranque. La ruta es relativa a la carpeta de imágenes del servicio.
+; favicon: Ruta relativa (desde el contenedor de imágenes) al ícono de la aplicación.
+; location: Ubicación predeterminada para el clima. Véase la documentación de la API de clima.
+; sys[locale]: Soporte de lenguaje interno de PHP a usar para el servicio.
+; sys[timezone]: Huso horario de PHP.
+; banners[]: Set de plantillas de banners a usar (publicidad del header).
+; bannerTopRotationTimer: Intervalo (en milisegundos) de rotación del top banner (brand).
+; newsCacheTimer: Intervalo (en milisegundos) de actualización de noticias.
+; theme: Tema gráfico de la aplicación por default.
+; type: Tipo de medio: [newspaper:magazine:general]
+; scopeDescription: Alcance (distribución) del servicio.
+; copyright: Nota de copyright del servicio.
+; forceTitle: Fuerza el título de la app con el título del servicio activo.
+; sorting: [original|datetime] Tipo de ordenamiento de las noticias en la home. "datetime" mantiene el órden original de las noticias en el canal; "datetime" las ordena por fecha (la más reciente al comienzo). Default: "datetime".
+; suggestedBy: Nombre para mostrar en la pantalla principal (de elección del servicio) como "sugerido por"
+
+; ---
+
+[rssprocer]
+
+title = "RSS Procer"
+pageTitle = ":: RSS Procer ::"
+pageDescription = "RSS Procer - Lector Mobile de noticias"
+loaderText = "iMaat - RSS Procer"
+favicon = "rssprocer/favicon.png"
+location = "buenos_aires"
+sys[locale] = "es_AR.UTF-8"
+sys[timezone] = "America/Argentina/Buenos_Aires"
+banners[] = "brand"
+banners[] = "publicy_samsung"
+bannerTopRotationTimer = 10000
+newsCacheTimer = 1200000
+type = newspaper
+scopeDescription = "Capital Federal"
+copyright = "SA LA NACION"
+forceTitle = 1

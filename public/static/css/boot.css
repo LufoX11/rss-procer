@@ -1,0 +1,78 @@
+* {
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+}
+body {
+    color: white;
+    background-color: #666;
+    background-image: linear-gradient(top, #222 0%, #666 51%);
+    background-image: -webkit-linear-gradient(top, #222 0%, #666 51%);
+    background-image: -ms-linear-gradient(top, #222 0%, #666 51%);
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #222),
+        color-stop(0.51, #666)
+    );
+    background-attachment: fixed;
+    text-shadow:0 1px 0 #000;
+    font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-transform:uppercase;
+    width: 100%;
+}
+.app {
+    background: url(../img/themes/logo.png) no-repeat center top;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 60px;
+    width: 320px;
+    text-align: center;
+    padding: 160px 0 0 0;
+    margin: -95px 0 0 -160px;
+}
+@media screen and (min-aspect-ratio: 1/1) and (min-width: 400px) {
+    .app {
+        background-position: top center;
+        padding: 150px 0 0 0;
+        margin: -90px 0 0 -159px;
+    }
+}
+.event {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 12px;
+    margin: 0 102px;
+    padding: 6px 0;
+}
+.event.listening {
+    background-color: #222;
+    display: block;
+}
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+.blink {
+    animation: fade 3000ms infinite;
+    -webkit-animation: fade 3000ms infinite;
+}
+#preloaded-uri {
+    display: none;
+    width: 1px;
+    height: 1px;
+}
